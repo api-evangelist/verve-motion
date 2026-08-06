@@ -1,7 +1,17 @@
 aid: verve-motion
 name: Verve Motion
-description: 'Verve Motion is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Verve Motion is a wearable robotics company spun out of the Harvard Biodesign Lab that builds
+  SafeLift, a soft powered exosuit for industrial workers who lift repetitively. Inertial sensors
+  woven into the suit detect lifting motion and trigger assistive force that the company says takes
+  up to 40% of the strain off a worker's back, while Verve Logic — its cloud platform — collects the
+  resulting movement data and reports ergonomic risk, unsafe-posture trends and exosuit utilization
+  to safety managers. SafeLift is sold as a subscription bundling the exosuit, the Verve Logic data
+  portal and Verve Care support, and is distributed in part through partners such as HexArmor. Verve
+  Motion publishes no public developer program, API reference or machine-readable specification; the
+  Verve Logic portal at logic.vervemotion.com is a customer-only single-page application that
+  disallows crawling in robots.txt.
+image: https://vervemotion.com/wp-content/uploads/2022/06/Verve_Favicon.png
 url: https://raw.githubusercontent.com/api-evangelist/verve-motion/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +22,15 @@ created: '2026-08-05'
 modified: '2026-08-05'
 tags:
 - Company
+- Robotics
+- Wearables
+- Worker Safety
+- Ergonomics
+- Industrial
+- Warehousing
+- Logistics
+- Hardware
+- Analytics
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +39,63 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://vervemotion.com/
+- type: About
+  url: https://vervemotion.com/about/
+- type: Solutions
+  url: https://vervemotion.com/solutions/
+- type: CaseStudies
+  url: https://vervemotion.com/customer-results/
+- type: FAQ
+  url: https://vervemotion.com/faq/
+- type: ContactUs
+  url: https://vervemotion.com/contact-us/
+- type: Login
+  url: https://logic.vervemotion.com/
+- type: Partners
+  url: https://learn.vervemotion.com/partner-program
+- type: Blog
+  url: https://blog.vervemotion.com/
+- type: BlogRSS
+  url: https://blog.vervemotion.com/rss.xml
+- type: Careers
+  url: https://vervemotion.com/careers/
+- type: TermsOfService
+  url: https://vervemotion.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://vervemotion.com/privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/verve-motion/
+- type: YouTube
+  url: https://www.youtube.com/@VerveMotion
+- type: Instagram
+  url: https://www.instagram.com/vervemotion/
+- type: SecondaryMarket
   url: https://forgeglobal.com/verve-motion_stock/
+- type: DomainSecurity
+  url: security/verve-motion-domain-security.yml
+- type: LLMsTxt
+  url: llms/verve-motion-llms.txt
+x-enrichment:
+  date: '2026-08-05'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Verve Motion ships an exosuit plus the Verve Logic analytics portal, but no developer surface of
+    any kind — /developers, /docs, /api and /llms.txt on vervemotion.com all return a hard 404, and
+    the Verve Logic app at logic.vervemotion.com is a customer-only React SPA whose robots.txt is
+    "disallow: /".
+  evidence:
+  - url: https://vervemotion.com/developers
+    status: 404
+  - url: https://vervemotion.com/api
+    status: 404
+  - url: https://vervemotion.com/llms.txt
+    status: 404
+  - url: https://logic.vervemotion.com/robots.txt
+    status: 200
+  checked: '2026-08-05'

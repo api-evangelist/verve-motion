@@ -1,0 +1,59 @@
+generated: '2026-08-05'
+method: probed
+source: live probes of Verve Motion public hosts
+note: >-
+  Probed the standard /.well-known/ discovery surface across every publicly reachable Verve Motion
+  host. None returned 200; recorded here as honest negative results. No WellKnown or SecurityTxt
+  pointer is emitted in apis.yml because nothing was found. The fourth host,
+  logic.vervemotion.com (the customer-only Verve Logic portal), was NOT swept: its robots.txt is
+  "user-agent: * / disallow: /" and it answers every path with the same 17,721-byte SPA shell, so a
+  200 there is a soft-404 and not evidence of a document.
+hosts:
+- host: https://vervemotion.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://learn.vervemotion.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://blog.vervemotion.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+contract_discovery:
+  note: >-
+    Full STEP 0b sweep. No REST OpenAPI, no GraphQL endpoint, no MCP endpoint and no A2A agent card
+    were found on any host. api./portal./app./dashboard./my./cloud./data./admin.vervemotion.com do
+    not resolve in DNS.
+  probes:
+  - {url: 'https://vervemotion.com/openapi.json', status: 404}
+  - {url: 'https://vervemotion.com/api-docs', status: 404}
+  - {url: 'https://vervemotion.com/docs', status: 404}
+  - {url: 'https://vervemotion.com/developers', status: 404}
+  - {url: 'https://vervemotion.com/api', status: 404}
+  - {url: 'https://vervemotion.com/llms.txt', status: 404}
+  - {url: 'https://logic.vervemotion.com/robots.txt', status: 200, note: 'disallow: /'}
+  - {url: 'https://logic.vervemotion.com/openapi.json', status: 200, note: 'soft-404 — identical 17721-byte SPA shell as / and every other path; not a spec'}
+  - {url: 'https://api.github.com/orgs/vervemotion', status: 200, note: 'org exists, 0 public repos'}
+  - {url: 'https://registry.npmjs.org/-/v1/search?text=vervemotion', status: 200, note: '0 results'}
+  dns_misses:
+  - api.vervemotion.com
+  - portal.vervemotion.com
+  - app.vervemotion.com
+  - dashboard.vervemotion.com
+  - my.vervemotion.com
+  - cloud.vervemotion.com
+  - data.vervemotion.com
+  - admin.vervemotion.com
