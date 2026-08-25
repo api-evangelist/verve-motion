@@ -6,17 +6,23 @@
       "feed_url": "https://learn.vervemotion.com/partner-program",
       "title": "",
       "saved": 0,
-      "method": "none",
-      "error": "parse_failed"
+      "method": "none"
+    },
+    {
+      "source": "https://blog.vervemotion.com/rss.xml",
+      "feed_url": "https://blog.vervemotion.com/rss.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     },
     {
       "source": "https://blog.vervemotion.com/",
       "feed_url": "https://blog.vervemotion.com/rss.xml",
       "title": "",
-      "saved": 10,
+      "saved": 0,
       "method": "discovered"
     }
   ],
   "post_count": 10,
-  "fetched": "2026-08-15T12:11:08Z"
+  "fetched": "2026-08-22T20:20:02Z"
 }
