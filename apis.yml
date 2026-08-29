@@ -11,6 +11,17 @@ description: >-
   Motion publishes no public developer program, API reference or machine-readable specification; the
   Verve Logic portal at logic.vervemotion.com is a customer-only single-page application that
   disallows crawling in robots.txt.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://vervemotion.com/wp-content/uploads/2022/06/Verve_Favicon.png
 url: https://raw.githubusercontent.com/api-evangelist/verve-motion/refs/heads/main/apis.yml
 x-type: company
